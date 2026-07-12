@@ -14,8 +14,8 @@ from config import BAYARGG_SECRET
 
 router = APIRouter(prefix="/bayargg", tags=["BayarGG"])
 
-SECRET_KEY = BAYARGG_SECRET.encode()
-ADMIN_CHAT_ID = -1003894841696
+SECRET_KEY = BAYARGG_WEBHOOK_SECRET.encode()
+ADMIN_CHAT_ID = -1004437365690
 
 
 def secure_compare(a: str, b: str) -> bool:
@@ -125,7 +125,7 @@ async def webhook(request: Request):
             "vip5": 5,
             "vip7": 7,
             "vip10": 10,
-            "vip20": 20,
+            "vip20": 15,
             "vip30": 30
         }
 
